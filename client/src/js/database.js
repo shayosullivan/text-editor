@@ -18,7 +18,6 @@ console.error("putDb not implemented");
 const contentDb = await openDB("content", 1);
 const tx = contentDb.transaction("content", "readwrite");
 const store =tx.objectStore("content");
-const request = store.objectStore.put({id: id, value: content})
 const result = await request;
 console.log("result.value", result)
 };
